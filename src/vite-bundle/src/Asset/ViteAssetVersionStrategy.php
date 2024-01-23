@@ -82,6 +82,7 @@ class ViteAssetVersionStrategy implements VersionStrategyInterface
 
         if ('build' === $this->viteMode) {
             if (isset($this->manifestData[$path])) {
+                // return $this->completeURL(ltrim($this->basePath, '/').$this->manifestData[$path]['file']);
                 return $this->completeURL($this->basePath.$this->manifestData[$path]['file']);
             }
         } else {
